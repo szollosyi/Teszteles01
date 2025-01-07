@@ -39,8 +39,8 @@ namespace Teszteles01.Tests
         public void NegyzetTest3()
         {
             //Arrange
-            int szam = 3;
-            int expected = 6;
+            int szam = 4;
+            int expected = 16;
             //Act
             int actual = Program.Negyzet(szam);
             //Assert

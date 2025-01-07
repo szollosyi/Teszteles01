@@ -18,7 +18,7 @@ namespace Teszteles01
 
         public static int Negyzet(int szam)
         {
-            return szam + szam;
+            return szam * szam;
         }
     }
 }

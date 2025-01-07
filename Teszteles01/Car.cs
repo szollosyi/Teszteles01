@@ -14,7 +14,7 @@ namespace Teszteles01
         //Az adó mértéke 10 évnél fiatalabb autó esetén 20000 Ft, 10 és 30 év között 10000 Ft, 30 év fölött 0 Ft
         public int Tax { get {if (DateTime.Today.Year - Year < 10)
                                 return 20000;
-                            else if (DateTime.Today.Year - Year < 30)
+                            else if (DateTime.Today.Year - Year <= 30)
                                 return 10000;
                             else
                                 return 0;

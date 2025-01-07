@@ -23,12 +23,56 @@ namespace Teszteles01.Tests
         }
 
         [TestMethod()]
-        public void CarTest2()
+        public void CarTest2a()
         {
             //Arrange
             Car car = new Car("Opel", "Astra", 2010);
             //Act
             int expected = 10000;
+            //Assert
+            Assert.AreEqual(expected, car.Tax);
+        }
+
+        [TestMethod()]
+        public void CarTest2b()
+        {
+            //Arrange
+            Car car = new Car("Opel", "Astra", 2020);
+            //Act
+            int expected = 20000;
+            //Assert
+            Assert.AreEqual(expected, car.Tax);
+        }
+
+        [TestMethod()]
+        public void CarTest2c()
+        {
+            //Arrange
+            Car car = new Car("Opel", "Astra", 2015);
+            //Act
+            int expected = 10000;
+            //Assert
+            Assert.AreEqual(expected, car.Tax);
+        }
+
+        [TestMethod()]
+        public void CarTest2d()
+        {
+            //Arrange
+            Car car = new Car("Opel", "Astra", 1995);
+            //Act
+            int expected = 10000;
+            //Assert
+            Assert.AreEqual(expected, car.Tax);
+        }
+
+        [TestMethod()]
+        public void CarTest2e()
+        {
+            //Arrange
+            Car car = new Car("Opel", "Astra", 1990);
+            //Act
+            int expected = 0;
             //Assert
             Assert.AreEqual(expected, car.Tax);
         }
