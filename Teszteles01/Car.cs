@@ -25,6 +25,12 @@ namespace Teszteles01
             Model = model;
             Year = year;
         }
+
+        public bool IsVeteran()
+        {
+            return DateTime.Today.Year - Year > 30;
+        }
+
         public override string ToString()
         {
             return $"{Brand} {Model} ({Year}) - {Tax} Ft";

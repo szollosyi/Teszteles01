@@ -87,5 +87,38 @@ namespace Teszteles01.Tests
             //Assert
             Assert.AreEqual(expected, car.ToString());
         }
+
+        [TestMethod()]
+        public void IsVeteranTesta()
+        {
+            //Arrange
+            Car car = new Car("Opel", "Astra", 2010);
+            //Act
+
+            //Assert
+            Assert.IsFalse(car.IsVeteran());
+        }
+
+        [TestMethod()]
+        public void IsVeteranTestb()
+        {
+            //Arrange
+            Car car = new Car("Opel", "Astra", 1995);
+            //Act
+
+            //Assert
+            Assert.IsFalse(car.IsVeteran());
+        }
+
+        [TestMethod()]
+        public void IsVeteranTestc()
+        {
+            //Arrange
+            Car car = new Car("Opel", "Astra", 1990);
+            //Act
+
+            //Assert
+            Assert.IsTrue(car.IsVeteran());
+        }
     }
 }
